@@ -6,14 +6,17 @@ services:
     restart: unless-stopped
     privileged: true
     ports:
+    # By default this is 80 rather than 82 which can conflict with some things
       - '82:3001'
     volumes:
       - /:/mnt/host:ro
     environment:
+      # Read over what these do before deploying them https://getdashdot.com/docs
       DASHDOT_OVERRIDE_CPU_BRAND: 'Broadcom'
       DASHDOT_OVERRIDE_RAM_BRAND: 'Unknown'
       DASHDOT_OVERRIDE_RAM_SIZE: '3221225472'
       DASHDOT_OVERRIDE_NETWORK_INTERFACE_SPEED: 1000
+      # You are agreeing to Ooklas Privacy Policy, ToS and EULA https://getdashdot.com/docs/configuration/network#dashdot_accept_ookla_eula
       DASHDOT_ACCEPT_OOKLA_EULA: true
       DASHDOT_OVERRIDE_STORAGE_BRANDS: 'mmcblk0=Sandisk'
       DASHDOT_OVERRIDE_STORAGE_TYPES: 'mmcblk0=SDCard'
