@@ -9,3 +9,13 @@ services:
       - '82:3001'
     volumes:
       - /:/mnt/host:ro
+    environment:
+      DASHDOT_OVERRIDE_CPU_BRAND: 'Broadcom'
+      DASHDOT_OVERRIDE_RAM_BRAND: 'Unknown'
+      DASHDOT_OVERRIDE_RAM_SIZE: '3221225472'
+      DASHDOT_OVERRIDE_NETWORK_INTERFACE_SPEED: 1000
+      DASHDOT_ACCEPT_OOKLA_EULA: true
+      DASHDOT_OVERRIDE_STORAGE_BRANDS: 'mmcblk0=Sandisk'
+      DASHDOT_OVERRIDE_STORAGE_TYPES: 'mmcblk0=SDCard'
+      DASHDOT_SHOW_DASH_VERSION: 'bottom_right'
+      DASHDOT_ALWAYS_SHOW_PERCENTAGES: true
