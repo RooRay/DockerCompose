@@ -1,0 +1,22 @@
+muse:
+  image: ghcr.io/museofficial/muse:latest
+  restart: always
+  volumes:
+    - ./muse:/data
+  environment:
+    - DISCORD_TOKEN=YOUR TOKEN HERE
+    - YOUTUBE_API_KEY=YOUR KEY HERE
+    # Below are all optional
+    - SPOTIFY_CLIENT_ID=YOUR CLIENT ID HERE
+    - SPOTIFY_CLIENT_SECRET=YOUR CLIENT SECRET HERE
+    - CACHE_LIMIT=10GB
+    - ENABLE_SPONSORBLOCK=true
+    - SPONSORBLOCK_TIMEOUT=2
+    - BOT_STATUS=online
+    - BOT_ACTIVITY_TYPE=LISTENING
+    # - BOT_ACTIVITY_URL=   # Not used for non-streaming activity types
+    - BOT_ACTIVITY=your music
+  network_mode: "service:warp"
+  # Remove below if not using WARP
+  depends_on:
+    - warp
