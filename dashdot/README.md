@@ -2,7 +2,8 @@
 
 I use Dashdot to collect metrics on my systems performance and add them to Homarr. Currently I haven't used this much as I've been trying to get it to play nicely with other software.
 
-**Please note if you set DASHDOT_ACCEPT_OOKLA_EULA to true like I did you are agreeing to Ookla's ToS, Privacy Policy and EULA.** More info and links to these are [here](https://getdashdot.com/docs/configuration/network#dashdot_accept_ookla_eula).
+> [!WARNING]
+>Please note if you set DASHDOT_ACCEPT_OOKLA_EULA to `true` like I did you are agreeing to Ookla's ToS, Privacy Policy and EULA. More info and links to these are [here](https://getdashdot.com/docs/configuration/network#dashdot_accept_ookla_eula).
 
 ## Changes Made
 
